@@ -120,12 +120,17 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+   > The HTML is displayed on the browser by dynamically generating the `PotteryList()` JavaScript function in the index.html's <article> tag. 
+   > 1. The `PotteryList()` function builds the html list and then is invoked on main.js and stored in the potteryHTML variable. 
+   > 2. `potteryHTML` is stringified and saved in a new variable, `potteryGrid`
+   > 3. Next, by adding the `id="pottery-list"` to the <article> on index.html, I'm able to target that DOM element in main.js and save `document.querySelector("#pottery-list")` to the new variable `potteryElement`.
+   > 4. Finally, the targeted DOM element (represented by `potteryElement`) receives the dynamically generated stringified html by sending the html to the <article> DOM element's innerHTML.
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/b923bd1c71614726b4049d3fc8257638
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+   > It's best to keep module functions separated so that code is more readable and to have good boundaries for the work that each function does. The `makePottery` function returns new pottery objects, which are essential for other functions in the main.js file to build from: makePottery(), firePottery(), toSellOrNotToSell().
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+   > These changes affect the logic and checks we're doing in the toSellOrNotToSell() function. To implement the cracked, discounted pottery as items to sell, the 3rd check (if the piece isn't cracked) will need to be rewritten as:
+   > If the piece **IS** cracked, then add a price property to the object with a 2.50 value
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/bbb4a1b87e384cdbb67279a19427a9a5
