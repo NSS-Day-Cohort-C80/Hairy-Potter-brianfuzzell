@@ -1,5 +1,6 @@
 {
   "name": "the-hairy-potter",
+  "type": "module",
   "version": "1.0.0",
   "description": "## Setup",
   "main": "index.js",
