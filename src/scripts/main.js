@@ -42,15 +42,16 @@ toSellOrNotToSell(firedPitcher)
 console.log(usePottery())
 
 // Invoke the component function that renders the HTML list
-const potteryHTML = PotteryList();
+const potteryHTML = PotteryList(); // string of HTML; var = the return val of the func
 console.log(potteryHTML)
 
 // Render the HTML string to the correct DOM element
     // Step 1 - stringify the rendered HTML list
-const potteryGrid = `${potteryHTML}`
+// const potteryGrid = `${potteryHTML}` // Don't need
 
     // Step 2 - target the article DOM element's id
 const potteryElement = document.querySelector("#pottery-list")
 
     // Step 3 - Update the targeted DOM element's inner html with the pottery html 
-potteryElement.innerHTML = potteryGrid
+potteryElement.innerHTML = potteryHTML
+// var          prop        HTML from line 45
